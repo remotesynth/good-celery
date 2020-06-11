@@ -1,14 +1,27 @@
 import React from 'react';
 import _ from 'lodash';
-import moment from 'moment-strftime';
+import moment from 'moment-strftime'
+import SEO from '../components/SEO'
 
 import {Layout} from '../components/index';
 import {safePrefix, htmlToReact} from '../utils';
 
 export default class Post extends React.Component {
     render() {
+        let twitter = '';
+        if (_.get(this.props, 'pageContext.site.siteMetadata.footer.has_social') && _.get(this.props, 'pageContext.site.siteMetadata.footer.social_links')) {
+          let social_links =  _.get(this.props, 'pageContext.site.siteMetadata.footer.social_links')
+          let twitter = '@' + social_links.find(element => element.label === "Twitter").url.split('/').pop()
+        }
         return (
             <Layout {...this.props}>
+            <SEO
+              title={_.get(this.props, 'pageContext.frontmatter.title')}
+              description={_.get(this.props, 'pageContext.frontmatter.excerpt')}
+              image={safePrefix(_.get(this.props, 'pageContext.frontmatter.image'))}
+              pathname={this.props.location.pathname}
+              author={twitter}
+            />
             <div className="outer">
               <div className="inner-medium">
                 <article className="post post-full">
