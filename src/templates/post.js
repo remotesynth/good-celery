@@ -19,7 +19,6 @@ export default class Post extends React.Component {
               title={_.get(this.props, 'pageContext.frontmatter.title')}
               description={_.get(this.props, 'pageContext.frontmatter.excerpt')}
               image={safePrefix(_.get(this.props, 'pageContext.frontmatter.image'))}
-              pathname={this.props.location.pathname}
               author={twitter}
             />
             <div className="outer">
