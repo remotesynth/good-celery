@@ -229,6 +229,14 @@ textarea {
   }
 }
 
+input[type="search"] {
+  width: 80%;
+  margin: 10px;
+}
+.ais-SearchBox-submit {
+  margin-right: 10px;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
