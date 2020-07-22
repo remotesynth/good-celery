@@ -1,6 +1,6 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
-import { connectHits, InstantSearch, SearchBox, Highlight } from 'react-instantsearch-dom';
+import { connectHits, InstantSearch, SearchBox } from 'react-instantsearch-dom';
 import {Link, safePrefix} from '../utils';
 import moment from 'moment-strftime';
 

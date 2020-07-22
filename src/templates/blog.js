@@ -1,10 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
-import moment from 'moment-strftime';
 import Search from '../components/Search';
 
 import {Layout} from '../components/index';
-import {getPages, Link, safePrefix} from '../utils';
+import {getPages} from '../utils';
 
 export default class Blog extends React.Component {
     render() {
