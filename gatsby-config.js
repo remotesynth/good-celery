@@ -49,6 +49,12 @@ module.exports = {
               queries,
               chunkSize: 10000,
             },
+        },
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint: 'https://remotesynthesis.us6.list-manage.com/subscribe/post?u=231f8aff82a1f82e4d6ab23d8&amp;id=d00ad8719a'
+            }
         }
     ]
 };
